@@ -233,3 +233,249 @@ function submitForm(e){
   alert('Thanks ' + name + "! We'll contact you at " + email + " — message received.");
   document.getElementById('contactForm').reset();
 }
+
+:root {
+  --pink: #ff5ba1;
+  --purple: #8b5cf6;
+  --lightblue: #6ee7f9;
+  --text-dark: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.12);
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* --- NAVIGATION --- */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  color: white;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cta {
+  background: white;
+  color: var(--purple);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 20px;
+  padding: 60px 24px;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin: 0 0 10px;
+  color: white;
+}
+
+.hero-content p {
+  margin: 0 0 16px;
+  color: #f2f2f2;
+}
+
+.promo-row {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.promo-row input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.promo-row button {
+  background: var(--lightblue);
+  color: #333;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn {
+  background: white;
+  color: var(--purple);
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+/* --- VIDEO --- */
+.hero-video {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.hero-video video {
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* --- SECTIONS --- */
+.section {
+  padding: 60px 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.section p {
+  color: #f0f0f0;
+}
+
+.service-list li {
+  margin: 8px 0;
+}
+
+.packages .cards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 16px;
+  flex: 1;
+  min-width: 220px;
+  color: white;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.card.featured {
+  border: 2px solid var(--lightblue);
+  transform: scale(1.05);
+}
+
+.price {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--lightblue);
+}
+
+.select {
+  background: var(--lightblue);
+  color: #222;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* --- CONTACT --- */
+.contact form {
+  display: grid;
+  gap: 10px;
+  max-width: 560px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.contact .btn {
+  width: 180px;
+}
+
+/* --- FOOTER --- */
+footer {
+  padding: 18px 24px;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.15);
+  margin-top: 40px;
+  backdrop-filter: blur(8px);
+}
+
+.foot-links a {
+  color: var(--lightblue);
+  text-decoration: none;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-video {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
